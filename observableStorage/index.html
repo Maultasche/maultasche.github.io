@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>knockout.observableStorage Example Page</title>
+    <style type="text/css">
+      .textsection
+      {
+        margin-top: 10px;
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        This page contains examples of using knockout.observableStorage. It won't always work when loaded into
+        the browser as a file, as some browers don't allow storage events to be fired when loaded from a file.
+        It has to be loaded from a web server to get full functionality.
+        <br />
+        <br />
+        <p>
+        <a target="_blank" href="" class="btn btn-primary">Open a another instance of this page</a>
+        </p>
+      </div>
+    </div>
+    <p>
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Default Observable</strong></div>
+      <div class="panel-body">
+        <div class="textsection">This is an ordinary observable. It will not be persisted after 
+        a page reload</div>
+        <div class="textsection input-group">
+          <label for="default">Observable Value:</label>
+          <input id="default" class="form-control" data-bind="textInput: defaultValue"></input>
+        </div>
+        <div class="textsection">
+          <span data-bind="text: defaultValue" ></span>
+        </div>
+      </div>
+    </div>
+    </p>
+    <p>
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Local Storage Observable</strong></div>
+      <div class="panel-body">
+        <div class="textsection">This observable will be persisted when the page is refreshed and will sync
+        with other instances of this page in different tabs and windows. You can also change the local storage
+        value via the developer tools and watch it update on the page.</div>
+        <div class="textsection input-group">
+          <label for="local">Observable Value:</label>
+          <input id="local" class="form-control" data-bind="textInput: localStorageValue"></input>     
+        </div>
+        <div class="textsection">
+          <span data-bind="text: localStorageValue"></span>
+        </div>
+      </div>
+    </div>
+    </p>
+    <p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>Session Storage Observable</strong>
+      </div>
+      <div class="panel-body">
+        <div class="textsection">This observable will be persisted when the page is refreshed, but it is
+        local to the browser tab. Other tabs will not share the value and the value will disappear.
+        when the tab is closed. You can also change the local storage value via the developer tools 
+        and watch it update on the page.</div>
+        <div class="textsection">
+          <label for="session">Observable Value:</label>
+          <input id="session" data-bind="textInput: sessionStorageValue"></input>          
+        </div>
+        <div class="textsection">
+          <span data-bind="text: sessionStorageValue"></span>
+        </div>
+      </div>
+    </p>
+    <p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>Custom Observable</strong>
+      </div>
+      <div class="panel-body">
+        <div class="textsection">This observable will be persisted using custom get/set methods. 
+        In this particular example, the custom get/set methods read and write to a Javascript
+        variable, but they could contain code to persist values to a server.</div>
+        <div class="textsection">
+          <label for="custom">Observable Value:</label>
+          <input id="custom" data-bind="textInput: customStorageValue"></input>      
+        </div>
+        <div class="textsection">
+            <span data-bind="text: customStorageValue" ></span>
+        </div>
+      </div>
+    </p>
+    
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/knockout-3.4.0.min.js"></script>
+    <script src="../knockout.observableStorage.js"></script>  
+    <script>
+      var customValue = "Custom Value";
+      
+      var viewModel = {
+        // Default Observable
+        defaultValue: ko.observable(),
+
+        // Observable bound to local storage
+        localStorageValue: ko.observable("Local Storage Value")
+          .extend({ persist: {local: "localKey"} }),
+
+        // Observable bound to session storage
+        sessionStorageValue: ko.observable("Session Storage Value")
+          .extend({ persist: {session: "localKey"} }),
+
+        // Observable bound to custom storage
+        customStorageValue: ko.observable('Custom Storage Value')
+          .extend({ persist: { get: getCustomValue, set: getCustomValue } })
+      };
+
+      function getCustomValue() {
+        return customValue;
+      }
+
+      function setCustomValue(value) {
+        customValue = value;
+      }
+
+      ko.applyBindings(viewModel);
+    </script>
+  </body>
+</html>
