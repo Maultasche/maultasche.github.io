@@ -1,0 +1,3 @@
+[submodule "knockout.observableStorage"]
+	path = knockout.observableStorage
+	url = https://github.com/Maultasche/knockout.observableStorage
