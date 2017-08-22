@@ -4,3 +4,6 @@
 [submodule "observableStorage"]
 	path = observableStorage
 	url = https://github.com/Maultasche/knockout.observableStorage
+[submodule "UtfString"]
+	path = UtfString
+	url = https://github.com/Maultasche/UtfString.git
