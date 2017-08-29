@@ -7,3 +7,6 @@
 [submodule "UtfString"]
 	path = UtfString
 	url = https://github.com/Maultasche/UtfString.git
+[submodule "VolunteerHours"]
+	path = VolunteerHours
+	url = https://github.com/Maultasche/VolunteerHours.git
