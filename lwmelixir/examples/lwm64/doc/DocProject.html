@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.19.3">
+    <title>DocProject — Doc Project v0.1.0</title>
+    <link rel="stylesheet" href="dist/html-399e30b9b028e3059575.css" />
+    <script src="dist/sidebar_items-41a87ef894.js"></script>
+    <script async src="dist/html-399e30b9b028e3059575.js"></script>
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+Doc Project      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Doc Project v0.1.0</small>
+DocProject        
+          <a href="https://github.com/Maultasche/LwmElixirCode/tree/master/examples/lwm%2064%20-%20Documentation/doc_project/blob/master/lib/doc_project.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+      </h1>
+
+
+        <section id="moduledoc">
+<p>This is the main (and only) module for the doc project, which is intended
+to demonstrate documentation.</p>
+<p>The documentation in this module will be used for generating HTML documentation.
+It will be formatted real nice and pretty with pleasing colors and links.
+Yeah, links! Pretty fancy stuff. All it needs now are some unicorns and rainbows,
+but we ran out.</p>
+        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stringify/1">stringify(enumerable)</a>
+  </div>
+    <div class="summary-synopsis"><p>Converts an enumerable into string form</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/1">sum(enumerable)</a>
+  </div>
+    <div class="summary-synopsis"><p>Sums the numbers in an enumerable</p>
+</div>
+</div>
+  </div>
+        </section>
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="stringify/1">
+    <div class="detail-header">
+    <a href="#stringify/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">stringify(enumerable)</span>
+      <a href="https://github.com/Maultasche/LwmElixirCode/tree/master/examples/lwm%2064%20-%20Documentation/doc_project/blob/master/lib/doc_project.ex#L28" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+          </div>
+  <section class="docstring">
+<p>Converts an enumerable into string form</p>
+<p>The contents of the enumerable will be iterated over, converted to a string
+using <a href="https://hexdocs.pm/elixir/Kernel.html#inspect/1"><code class="inline">Kernel.inspect/1</code></a> and put in a comma-separated list surrounded by brackets.</p>
+<h2 id="stringify/1-examples" class="section-heading">
+  <a href="#stringify/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">stringify</span><span class="p" data-group-id="7563543353-1">(</span><span class="p" data-group-id="7563543353-2">[</span><span class="p" data-group-id="7563543353-2">]</span><span class="p" data-group-id="7563543353-1">)</span><span class="w">
+</span><span class="s">&quot;[]&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">stringify</span><span class="p" data-group-id="7563543353-3">(</span><span class="p" data-group-id="7563543353-4">[</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p" data-group-id="7563543353-4">]</span><span class="p" data-group-id="7563543353-3">)</span><span class="w">
+</span><span class="s">&quot;[</span><span class="se">\&quot;</span><span class="s">a</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">b</span><span class="se">\&quot;</span><span class="s">, </span><span class="se">\&quot;</span><span class="s">c</span><span class="se">\&quot;</span><span class="s">]&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">stringify</span><span class="p" data-group-id="7563543353-5">(</span><span class="mi">1</span><span class="o">.</span><span class="o">.</span><span class="mi">10</span><span class="p" data-group-id="7563543353-5">)</span><span class="w">
+</span><span class="s">&quot;[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]&quot;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="sum/1">
+    <div class="detail-header">
+    <a href="#sum/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">sum(enumerable)</span>
+      <a href="https://github.com/Maultasche/LwmElixirCode/tree/master/examples/lwm%2064%20-%20Documentation/doc_project/blob/master/lib/doc_project.ex#L53" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+          </div>
+  <section class="docstring">
+<p>Sums the numbers in an enumerable.</p>
+<p>If the enumerable does not contain all numbers, then there will be trouble.</p>
+<h2 id="sum/1-examples" class="section-heading">
+  <a href="#sum/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">sum</span><span class="p" data-group-id="6942460090-1">(</span><span class="p" data-group-id="6942460090-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="6942460090-2">]</span><span class="p" data-group-id="6942460090-1">)</span><span class="w">
+</span><span class="mi">15</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">sum</span><span class="p" data-group-id="6942460090-3">(</span><span class="mi">1</span><span class="o">.</span><span class="o">.</span><span class="mi">10</span><span class="p" data-group-id="6942460090-3">)</span><span class="w">
+</span><span class="mi">55</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">sum</span><span class="p" data-group-id="6942460090-4">(</span><span class="p" data-group-id="6942460090-5">[</span><span class="mi">22</span><span class="p" data-group-id="6942460090-5">]</span><span class="p" data-group-id="6942460090-4">)</span><span class="w">
+</span><span class="mi">22</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">DocProject</span><span class="o">.</span><span class="n">sum</span><span class="p" data-group-id="6942460090-6">(</span><span class="p" data-group-id="6942460090-7">[</span><span class="p" data-group-id="6942460090-7">]</span><span class="p" data-group-id="6942460090-6">)</span><span class="w">
+</span><span class="mi">0</span></code></pre>
+  </section>
+</section>
+          </div>
+        </section>
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  
+  </body>
+</html>
+
